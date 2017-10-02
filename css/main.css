@@ -126,7 +126,7 @@ main {
 }
 
 #hero {
-    background: #1E3F20 url("../img/clover.jpg") no-repeat center center fixed;
+    background: #1E3F20 url("../assets/img/clover.jpg") no-repeat center center fixed;
     height: 500px;
     background-size: cover;
 }
@@ -188,19 +188,19 @@ main {
 }
 
 #block-1 .landing-image {
-    background: transparent url("../img/graduate.jpg") no-repeat center center;
+    background: transparent url("../assets/img/graduate.jpg") no-repeat center center;
     background-size: cover;
     width: 20%;
 }
 
 #block-2 .landing-image {
-    background: transparent url("../img/laptop-woman.jpg") no-repeat center center;
+    background: transparent url("../assets/img/laptop-woman.jpg") no-repeat center center;
     background-size: cover;
     width: 20%;
 }
 
 #block-3 .landing-image {
-    background: transparent url("../img/art-woman.jpg") no-repeat center center;
+    background: transparent url("../assets/img/art-woman.jpg") no-repeat center center;
     background-size: cover;
     width: 20%;
 }
@@ -288,7 +288,7 @@ main {
     width: 100px;
     border-radius: 100px;
     margin: 2rem auto 2rem auto;
-    background: #CCB241 url("../img/green-smiley.png") center;
+    background: #CCB241 url("../assets/img/green-smiley.png") center;
     background-size: 100px 100px;
 }
 

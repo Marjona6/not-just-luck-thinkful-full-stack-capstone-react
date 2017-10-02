@@ -37,7 +37,7 @@ function submitNewAccomplishment(user) {
 	if (editToggle === false) {
 		$.ajax({
 				type: 'POST',
-				url: 'achievements/create',
+				url: 'https://not-just-luck.herokuapp.com/new/create',
 				dataType: 'json',
 				data: JSON.stringify(newAchObject),
 				contentType: 'application/json'
@@ -53,7 +53,7 @@ function submitNewAccomplishment(user) {
 	} else if (editToggle === true) {
 		$.ajax({
 				type: 'PUT',
-				url: 'achievement/' + achievementId,
+				url: 'https://not-just-luck.herokuapp.com/achievement/' + achievementId,
 				dataType: 'json',
 				data: JSON.stringify(newAchObject),
 				contentType: 'application/json'
@@ -68,26 +68,6 @@ function submitNewAccomplishment(user) {
 	            console.log(errorThrown);
 			});
 	};
-}
-
-// can't seem to use--asynchronicity is ruining the world
-function getUserAchievements(user) {
-	// console.log('user is ' + user);
-	// let achArray = [];
-	// $.getJSON('achievements', function(res) {
-	// 	for (let i=0; i<res.achievements.length; i++) {
-	// 		if (res.achievements[i].user === user) {
-	// 			achArray.push(res.achievements[i]);
-	// 		};
-	// 	};
-	// });
-	// console.log(achArray);
-	// if (achArray.length === 0) {
-	// 	newUserToggle = true;
-	// 	return achArray;
-	// } else {
-	// 	return achArray;
-	// }
 }
 
 function goBack() {
@@ -160,35 +140,32 @@ function showTimeline() {
 	$('#js-back-button').show();
 	$('#visuals').show();
 	$('#visual-when').show();
-	console.log(user);
-	$.getJSON('/achievements/' + user, function (res) {
+	$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 		let htmlContent = '';
 		for (let i=0; i<res.achievementOutput.length; i++) {
-			if (res.achievementOutput[i].user === user) {
-				let myUl = '<ul class="timeline-ul">';
-				for (let j=0; j<res.achievementOutput[i].achieveHow.length; j++) {
-					myUl += `<li>${res.achievementOutput[i].achieveHow[j]}</li>`;
-				};
-				myUl += '</ul>';
-				let achWhenReadable = new Date(res.achievementOutput[i].achieveWhen);
-				let dd = achWhenReadable.getDate();
-				let mm = achWhenReadable.getMonth()+1;
-				let yyyy = achWhenReadable.getFullYear();
-				// if statements to choose date display format go here
-				// defaults to European
-				if (dateFormat == 'in') {
-					achWhenReadable = yyyy + '/' + mm + '/' + dd;
-				} else if (dateFormat == 'us') {
-					achWhenReadable = mm + '/' + dd + '/' + yyyy;
-				} else {
-					achWhenReadable = dd + '/' + mm + '/' + yyyy;
-				}
-				htmlContent += `<div class="timeline-item" date-is="${achWhenReadable}">
-					<a href="#" class="js-get-achievement" id="${res.achievementOutput[i]._id}"><h2>
-					${res.achievementOutput[i].achieveWhat}</h2></a>
-					<p>${res.achievementOutput[i].achieveWhy}</p>
-					<p>It took: ${myUl}</div>`;	
-				};			
+			let myUl = '<ul class="timeline-ul">';
+			for (let j=0; j<res.achievementOutput[i].achieveHow.length; j++) {
+				myUl += `<li>${res.achievementOutput[i].achieveHow[j]}</li>`;
+			};
+			myUl += '</ul>';
+			let achWhenReadable = new Date(res.achievementOutput[i].achieveWhen);
+			let dd = achWhenReadable.getDate();
+			let mm = achWhenReadable.getMonth()+1;
+			let yyyy = achWhenReadable.getFullYear();
+			// if statements to choose date display format go here
+			// defaults to European
+			if (dateFormat == 'in') {
+				achWhenReadable = yyyy + '/' + mm + '/' + dd;
+			} else if (dateFormat == 'us') {
+				achWhenReadable = mm + '/' + dd + '/' + yyyy;
+			} else {
+				achWhenReadable = dd + '/' + mm + '/' + yyyy;
+			}
+			htmlContent += `<div class="timeline-item" date-is="${achWhenReadable}">
+				<a href="#" class="js-get-achievement" id="${res.achievementOutput[i]._id}"><h2>
+				${res.achievementOutput[i].achieveWhat}</h2></a>
+				<p>${res.achievementOutput[i].achieveWhy}</p>
+				<p>It took: ${myUl}</div>`;	
 		};
 		$('.timeline-container').html(htmlContent);
 	});
@@ -237,7 +214,7 @@ $(document).ready(function () {
 			// AJAX call to send form data up to server/DB and create new user
 			$.ajax({
 				type: 'POST',
-				url: 'users/create',
+				url: 'https://not-just-luck.herokuapp.com/users/create',
 				dataType: 'json',
 				data: JSON.stringify(newUserObject),
 				contentType: 'application/json'
@@ -286,24 +263,9 @@ $(document).ready(function () {
                 password: inputPw
 	        };
 	        user = inputUname;
-	        // the below is not working--thinks every achArray is empty and all users are new users
-	  //       let achArray = [];
-			// $.getJSON('achievements', function(res) {
-			// 	for (let i=0; i<res.achievements.length; i++) {
-			// 		if (res.achievements[i].user === user) {
-			// 			achArray.push(res.achievements[i]);
-			// 		};
-			// 	};
-			// });
-			// console.log(achArray);
-			// if (achArray.length === 0) {
-			// 	newUserToggle = true;
-			// } else {
-			// 	newUserToggle = false;
-			// }
 	        $.ajax({
 	        	type: "POST",
-	                url: "/signin",
+	                url: "https://not-just-luck.herokuapp.com/signin",
 	                dataType: 'json',
 	                data: JSON.stringify(unamePwObject),
 	                contentType: 'application/json'
@@ -328,7 +290,6 @@ $(document).ready(function () {
 		// when user clicks Add Accomplishment button from #user-home-page
 		document.getElementById('js-add-accomplishment').addEventListener('click', function(event) {
 			event.preventDefault();
-			// console.log('user is ' + user);
 			backWarnToggle = true;
 			$('*').scrollTop(0);
 			$("#datepicker").datepicker();
@@ -337,7 +298,6 @@ $(document).ready(function () {
 
 		// when user clicks I Did This button from #account-setup-page
 		document.getElementById('js-submit-accomplishment').addEventListener('click', function(event) {
-			// console.log('user is ' + user);
 			submitNewAccomplishment(user);
 			newUserToggle = false;
 		});
@@ -353,13 +313,11 @@ $(document).ready(function () {
 // when user clicks how/what/when/why links from home page
 	// when user clicks WHY from home page
 	document.getElementById('the-why').addEventListener('click', function(event) {
-		$.getJSON('/achievements', function (res) {
+		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let htmlContent = '';
-			for (let i=0; i<res.achievements.length; i++) {
-				if (res.achievements[i].user === user) {
-					if (res.achievements[i].achieveWhy !== undefined) {
-						htmlContent += '<p>' + res.achievements[i].achieveWhy + '</p>';
-					};
+			for (let i=0; i<res.achievementOutput.length; i++) {
+				if (res.achievementOutput[i].achieveWhy !== undefined) {
+					htmlContent += '<p>' + res.achievementOutput[i].achieveWhy + '</p>';
 				};
 			};
 			$('#motivations').html(htmlContent);
@@ -376,20 +334,17 @@ $(document).ready(function () {
 
 	// when user clicks HOW from home page
 	document.getElementById('the-how').addEventListener('click', function(event) {
-		$.getJSON('/achievements', function (res) {
+		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let traitsObject = {};
-			for (let i=0; i<res.achievements.length; i++) {
-				// make sure to only get those belonging to the signed-in user
-				if (res.achievements[i].user === user) {
-					// need to loop through each res.achievements[i].achieveHow array and add up the total of each trait
-					for (let j=0; j<res.achievements[i].achieveHow.length; j++) {
-						if (res.achievements[i].achieveHow[j] in traitsObject) {
-							// if the trait already exists in the object, increase its value by 1 (1 instance)
-							traitsObject[res.achievements[i].achieveHow[j]] += 1;
-						} else {
-							// if the trait does not exist in the object already, add it with value of 1 (1 instance)
-							traitsObject[res.achievements[i].achieveHow[j]]	= 1;
-						};
+			for (let i=0; i<res.achievementOutput.length; i++) {
+				// need to loop through each res.achievementOutput[i].achieveHow array and add up the total of each trait
+				for (let j=0; j<res.achievementOutput[i].achieveHow.length; j++) {
+					if (res.achievementOutput[i].achieveHow[j] in traitsObject) {
+						// if the trait already exists in the object, increase its value by 1 (1 instance)
+						traitsObject[res.achievementOutput[i].achieveHow[j]] += 1;
+					} else {
+						// if the trait does not exist in the object already, add it with value of 1 (1 instance)
+						traitsObject[res.achievementOutput[i].achieveHow[j]]	= 1;
 					};
 				};
 			};
@@ -430,7 +385,7 @@ $(document).ready(function () {
 			editToggle = true;
 			achievementId = event.target.parentNode.id;
 			// AJAX call to get the values of the achievement from the DB
-			$.getJSON('/achievement/' + achievementId, function(res) {
+			$.getJSON('http://not-just-luck.herokuapp.com/achievement/' + achievementId, function(res) {
 				// set back warning toggle to true
 				backWarnToggle = true;
 				// add in pre-filled values based on achievement id
@@ -469,7 +424,7 @@ $(document).ready(function () {
 				if (confirm('Are you SURE you want to delete this awesome accomplishment? Your data will be PERMANENTLY erased.') === true) {
 					$.ajax({
 						method: 'DELETE',
-						url: '/achievement/' + achievementId,
+						url: 'https://not-just-luck.herokuapp.com/achievement/' + achievementId,
 						success: showTimeline
 					});
 				}
@@ -480,13 +435,11 @@ $(document).ready(function () {
 
 	// when user clicks WHAT from home page
 	document.getElementById('the-what').addEventListener('click', function(event) {
-		$.getJSON('/achievements', function (res) {
+		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let htmlContent = '';
-			for (let i=0; i<res.achievements.length; i++) {
-				if (res.achievements[i].user === user) {
-					if (res.achievements[i].achieveWhat !== undefined) {
-						htmlContent += '<p>' + res.achievements[i].achieveWhat + '</p>';
-					};
+			for (let i=0; i<res.achievementOutput.length; i++) {
+				if (res.achievementOutput[i].achieveWhat !== undefined) {
+					htmlContent += '<p>' + res.achievementOutput[i].achieveWhat + '</p>';
 				};
 			};
 			$('#awesome-stuff').html(htmlContent);
