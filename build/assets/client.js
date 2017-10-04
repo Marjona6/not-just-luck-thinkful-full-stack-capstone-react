@@ -81,6 +81,7 @@ function goBack() {
 			} else {
 				showTimeline();
 			}
+			$('#input-form')[0].reset();
 			backWarnToggle = false;
 		}
 	} else {
@@ -170,7 +171,7 @@ function showTimeline() {
 		$('.timeline-container').html(htmlContent);
 	});
 	// reset form back to empty
-	document.getElementById('input-form').reset();
+	$('#input-form')[0].reset();
 	// reset checkboxes back to unchecked
 	$('input:checkbox').removeAttr('checked');
 }
@@ -192,7 +193,7 @@ $(document).ready(function () {
 	$('#account-signup-page').show();
 
 // USER FLOW 1: USER SIGNS UP FOR NEW ACCOUNT
-	document.getElementById('js-new-account').addEventListener('click', function(event) {
+	$('#js-new-account').on('click', function(event) {
 		const form = document.body.querySelector('#new-account-form');
 		if (form.checkValidity && !form.checkValidity()) {
 			return;
@@ -238,14 +239,14 @@ $(document).ready(function () {
 // USER FLOW 2: USER WITH ACCOUNT SIGNS IN
 // users signing up for new accounts should be routed into this flow to keep everything inside a single user flow
 	// when user clicks sign-in link in header
-	document.getElementById('js-signin-link').addEventListener('click', function(event) {
+	$('#js-signin-link').on('click', function(event) {
 		event.preventDefault();
 		showSignInPage();
-	});
+	});	
 
 	// when user clicks sign-in button from #signin-page
 	// EVERYTHING MEATY GOES INSIDE HERE
-	document.getElementById('js-signin-button').addEventListener('click', function(event) {
+	$('#js-signin-button').on('click', function(event) {
 		event.preventDefault();
 		backToLandingPageToggle = false;
 		// AJAX call to validate login info and sign user in
@@ -288,7 +289,7 @@ $(document).ready(function () {
 		};
 
 		// when user clicks Add Accomplishment button from #user-home-page
-		document.getElementById('js-add-accomplishment').addEventListener('click', function(event) {
+		$('#js-add-accomplishment').on('click', function(event) {
 			event.preventDefault();
 			backWarnToggle = true;
 			$('*').scrollTop(0);
@@ -297,14 +298,14 @@ $(document).ready(function () {
 		});
 
 		// when user clicks I Did This button from #account-setup-page
-		document.getElementById('js-submit-accomplishment').addEventListener('click', function(event) {
+		$('#js-submit-accomplishment').on('click', function(event) {
 			submitNewAccomplishment(user);
 			newUserToggle = false;
 		});
 	});
 
 	// when user clicks sign-out link in header
-	document.getElementById('js-signout-link').addEventListener('click', function(event) {
+	$('#js-signout-link').on('click', function(event) {
 		location.reload();
 	});
 
@@ -312,7 +313,7 @@ $(document).ready(function () {
 
 // when user clicks how/what/when/why links from home page
 	// when user clicks WHY from home page
-	document.getElementById('the-why').addEventListener('click', function(event) {
+	$('#the-why').on('click', function(event) {
 		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let htmlContent = '';
 			for (let i=0; i<res.achievementOutput.length; i++) {
@@ -333,7 +334,7 @@ $(document).ready(function () {
 	});
 
 	// when user clicks HOW from home page
-	document.getElementById('the-how').addEventListener('click', function(event) {
+	$('#the-how').on('click', function(event) {
 		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let traitsObject = {};
 			for (let i=0; i<res.achievementOutput.length; i++) {
@@ -367,7 +368,7 @@ $(document).ready(function () {
 	});
 
 	// when user clicks WHEN from home page
-	document.getElementById('the-when').addEventListener('click', function(event) {
+	$('#the-when').on('click', function(event) {
 		event.preventDefault();
 		backToHomePageToggle = false;
 		showTimeline();
@@ -414,11 +415,11 @@ $(document).ready(function () {
 			backWarnToggle = false;
 
 			// when user clicks I Did This button from #account-setup-page
-			document.getElementById('js-submit-accomplishment').addEventListener('click', function(event) {
+			$('#js-submit-accomplishment').on('click', function(event) {
 				submitNewAccomplishment(user);
 			});
 			// when user clicks DELETE button from an edit screen
-			document.getElementById('js-delete-button').addEventListener('click', function(event) {
+			$('#js-delete-button').on('click', function(event) {
 				event.preventDefault();
 				backToHomePageToggle = false;
 				if (confirm('Are you SURE you want to delete this awesome accomplishment? Your data will be PERMANENTLY erased.') === true) {
@@ -434,7 +435,7 @@ $(document).ready(function () {
 		
 
 	// when user clicks WHAT from home page
-	document.getElementById('the-what').addEventListener('click', function(event) {
+	$('#the-what').on('click', function(event) {
 		$.getJSON('https://not-just-luck.herokuapp.com/achievements/' + user, function (res) {
 			let htmlContent = '';
 			for (let i=0; i<res.achievementOutput.length; i++) {
@@ -455,7 +456,7 @@ $(document).ready(function () {
 	});
 
 	// when user clicks Back button from any of the visuals
-	document.getElementById('js-back-button').addEventListener('click', function(event) {
+	$('#js-back-button').on('click', function(event) {
 		goBack();
 	});
 });

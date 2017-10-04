@@ -60,14 +60,21 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
+	var _footer = __webpack_require__(217);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	// import '../assets/css/main.css';
+	
 	document.addEventListener('DOMContentLoaded', function () {
-	                         console.log('header thing ran');
-	                         return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
 	});
 	
-	// import '../assets/css/main.css';
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
+	});
 
 /***/ }),
 /* 1 */
@@ -23740,7 +23747,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	exports.default = Header;
 	
@@ -23755,40 +23762,94 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function Header(props) {
-	  return _react2.default.createElement(
-	    'header',
-	    null,
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Not Just Luck'
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: '#', id: 'js-signin-link', alt: 'Sign In' },
-	      'Sign In'
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: '#', id: 'js-signout-link', alt: 'Sign Out' },
-	      'Sign Out'
-	    )
-	  );
+		return _react2.default.createElement(
+			'header',
+			null,
+			_react2.default.createElement(
+				'h1',
+				null,
+				'Not Just Luck'
+			),
+			_react2.default.createElement(
+				'a',
+				{ href: '#', id: 'js-signin-link', alt: 'Sign In' },
+				'Sign In'
+			),
+			_react2.default.createElement(
+				'a',
+				{ href: '#', id: 'js-signout-link', alt: 'Sign Out' },
+				'Sign Out'
+			)
+		);
 	}
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 	
-	// var React = require('react');
-	// var ReactDOM = require('react-dom');
-	// //make the function for header and return the right statement
-	// var Header = function() {
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Footer;
 	
-	//     return (
-	//     	<header>
-	// 	    	blah blah
-	// 		</header>
-	//     );
-	// };
+	var _react = __webpack_require__(1);
 	
-	// module.exports = Header;
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Footer(props) {
+	    return _react2.default.createElement(
+	        'footer',
+	        null,
+	        _react2.default.createElement(
+	            'ul',
+	            null,
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '\xA9 2017 Meryem Yanar'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/Marjona6', title: 'Check out my code on GitHub' },
+	                    'GitHub'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://www.linkedin.com/in/marjona6/', title: 'Connect with me on LinkedIn' },
+	                    'LinkedIn'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'mailto:meryem.yanaryanar@gmail.com?Subject=Hello', title: 'Send me an email' },
+	                    'Email'
+	                )
+	            )
+	        )
+	    );
+	}
 
 /***/ })
 /******/ ]);
