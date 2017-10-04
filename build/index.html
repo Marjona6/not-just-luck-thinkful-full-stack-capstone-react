@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Not Just Luck: Banish Imposter Syndrome for Good!</title>
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Crimson+Text|Montserrat" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="reactHeader"></div>
+    <!-- <header>
+    	<h1>Not Just Luck</h1>
+        <a href="#" id="js-signin-link" alt="Sign In">Sign In</a>
+        <a href="#" id="js-signout-link" alt="Sign Out">Sign Out</a>
+    </header> -->
+    <main>
+    	<section id="landing-page">
+    		<div id="hero">
+    			<div id="hero-blurb">
+		    		<p>Kiss impostor syndrome goodbye.</p>
+		    	</div>
+    		</div>
+    		<div id="block-1" class="landing-block">
+    			<div class="landing-image"></div>
+    			<div class="landing-blurb">
+		    		<p>You worked hard to get to where you are today.</p>
+		    		<p>Not Just Luck reminds you.</p>
+		    	</div>
+    		</div>
+    		<div id="block-2" class="landing-block">
+    			<div class="landing-blurb">
+		    		<p>Tell Not Just Luck about some of your successes and achievements.</p>
+		    	</div>
+		    	<div class="landing-image"></div>
+    		</div>
+    		<div id="block-3" class="landing-block">
+    			<div class="landing-image"></div>
+    			<div class="landing-blurb">
+			    	<p>Look at your skills, character traits, and accomplishments anytime you need a reminder.</p>
+			    	<p>You did this. It's Not Just Luck.</p>
+			    </div>
+    		</div>
+    	</section>
+    	<section id="account-signup-page">
+    		<h3>Start My Best Life Now</h3>
+    		<p>You can overcome Impostor Syndrome and achieve your goals with confidence.</p>
+    		<form id="new-account-form" method="post">
+  				<p>First name:</p>
+    			<input type="text" name="fname" value="Charlene"required>
+    			<p>Username:</p>
+    			<input type="text" name="uname" value="charlene123" required>
+    			<p>Password:</p>
+    			<input type="password" name="pw" value="1234" required>
+    			<p>Confirm password:</p>
+    			<input type="password" name="confirm-pw" value="1234" required>
+    			<input type="submit" id="js-new-account" class="my-buttons" value="Let's Do This!">
+    		</form>
+    	</section>
+    	<section id="signin-page">
+    		<h3>Sign in to My Account</h3>
+    		<form>
+    			<p>Username:</p>
+    			<input name="signin-uname" value="charlene123" type="text" required>
+    			<p>Password:</p>
+    			<input name="signin-pw" value="1234" type="password" required>
+    			<input type="submit" id="js-signin-button" class="my-buttons" value="Sign In">
+    		</form>
+    	</section>
+    	<section id="account-setup-page">
+    		<h2>Let's Get Started!</h2>
+    		<div id="account-setup-blurb">
+    			<p>Let's start by setting up your account.</p>
+    		</div>
+    		<div id="add-new-blurb">
+    			<p>Let's add another achievement to your list!</p>
+    		</div>
+            <div id="add-details">
+    			<p>First, think of something you've accomplished that you're particularly proud of. What did you do? What skills did you use?</p>
+    			<p>Finally, think about why this accomplishment is meaningful to you. Did you help someone? Make a difference? Do something everyone told you you could never do?</p>
+            </div>
+    		<form id="input-form">
+    			<h3>What did you achieve?</h3>
+    				<p>Briefly describe your big achievement.</p>
+    				<input id="achieve-what" type="text" placeholder="I built a schoolhouse.">
+    			<h3>How did you achieve it?</h3>
+	    			<p>What specific skills or character traits did you draw on?</p>
+	    			<fieldset>
+	    				<ul class="checkbox">
+			    			<li><input type="checkbox" value="Optimism" /><label for="cb01">Optimism</label></li>
+			    			<li><input type="checkbox" value="Creativity" /><label for="cb02">Creativity</label></li>
+			    			<li><input type="checkbox" value="Resilience" /><label for="cb03">Resilience</label></li>
+			    			<li><input type="checkbox" value="Self-Control" /><label for="cb04">Self-Control</label></li>
+			    			<li><input type="checkbox" value="Focus" /><label for="cb05">Focus</label></li>
+			    			<li><input type="checkbox" value="Flexibility" /><label for="cb06">Flexibility</label></li>
+			    			<li><input type="checkbox" value="Vision" /><label for="cb07">Vision</label></li>
+			    			<li><input type="checkbox" value="Time Management" /><label for="cb08">Time Management</label></li>
+			    			<li><input type="checkbox" value="Communication Skills" /><label for="cb09">Communication Skills</label></li>
+			    			<li><input type="checkbox" value="Courage" /><label for="cb10">Courage</label></li>
+			    			<li><input type="checkbox" value="Generosity" /><label for="cb11">Generosity</label></li>
+			    			<li><input type="checkbox" value="Confidence" /><label for="cb12">Confidence</label></li>
+			    			<li><input type="checkbox" value="Curiosity" /><label for="cb13">Curiosity</label></li>
+			    			<li><input type="checkbox" value="Planning" /><label for="cb14">Planning</label></li>
+			    			<li><input type="checkbox" value="Balance" /><label for="cb15">Balance</label></li>
+			    			<li><input type="checkbox" value="Enthusiasm" /><label for="cb16">Enthusiasm</label></li>
+			    			<li><input type="checkbox" value="People Skills" /><label for="cb17">People Skills</label></li>
+			    			<li><input type="checkbox" value="Listening Skills" /><label for="cb18">Listening Skills</label></li>
+			    			<li><input type="checkbox" value="Empathy" /><label for="cb20">Empathy</label></li>
+			    			<li><input type="checkbox" value="Preparation" /><label for="cb21">Preparation</label></li>
+			    			<li><input type="checkbox" value="Self-Reliance" /><label for="cb22">Self-Reliance</label></li>
+			    			<li><input type="checkbox" value="Gratitude" /><label for="cb23">Gratitude</label></li>
+			    			<li><input type="checkbox" value="Forgiveness" /><label for="cb24">Forgiveness</label></li>
+			    			<li><input type="checkbox" value="Goal Setting" /><label for="cb25">Goal Setting</label></li>
+			    			<li><input type="checkbox" value="Grit" /><label for="cb26">Grit</label></li>
+			    			<li><input type="checkbox" value="Tenacity" /><label for="cb27">Tenacity</label></li>
+		    		</fieldset>
+    			<h3>When did you achieve it?</h3>
+    				<p>A rough estimate is fine here.</p>
+                        <input type="text" id="datepicker" placeholder="Date of your accomplishment">
+    					<!-- <input id="achieve-when" type="date"> -->
+    			<h3>Why is it meaningful to you?</h3>
+    				<p>Why is this accomplishment something you feel proud of?</p>
+    				<input id="achieve-why" type="textarea" placeholder="I helped people in need.">
+	    		<input type="submit" id="js-submit-accomplishment" class="my-buttons" value="I Did This!">
+	    	</form>
+    	</section>
+    	<section id="user-home-page">
+    		<h2>Hello, Smarty Pants!</h2>
+    			<p>Welcome to your home page! From here, you can view past successes or add new ones. Go you!</p>
+                <p>To edit or delete your past accomplishments, click on them from the timeline.</p>
+    		<div id="visualized-home">
+    			<div id="the-why">
+    				<a href="#"><h3>WHY?</h3></a>
+    				<p>my motivations</p>
+    			</div>
+    			<div id="the-how">
+    				<a href="#"><h3>HOW?</h3></a>
+    				<p>my qualities and skills</p>
+    			</div>
+    			<div id="user-avatar"></div>
+    			<div id="the-what">
+    				<a href="#"><h3>WHAT?</h3></a>
+    				<p>my achievements</p>
+    			</div>
+    			<div id="the-when">
+    				<a href="#"><h3>WHEN?</h3></a>
+    				<p>my timeline</p>
+    			</div>
+    		</div>
+    		<input type="submit" method="post" id="js-add-accomplishment" class="my-buttons" value="Add An Accomplishment">
+    	</section>
+    	<section id="visuals">
+    		<div id="visual-why">
+    			<h3>WHY?</h3>
+    			<p>Understanding what motivates you is crucial. Here you'll find a list of what has inspired you to succeed in the past.</p>
+    			<div id="motivations"></div>
+    		</div>
+    		<div id="visual-how">
+    			<h3>HOW?</h3>
+    			<p>"First, know thyself." Being aware of your best traits and strongest skills can help you overcome the naysayers.</p>
+                <div id="traits"></div>
+    		</div>
+    		<div id="visual-what">
+    			<h3>WHAT?</h3>
+    			<p>You can't be an impostor. Just look at all this awesome stuff you've done!</p>
+                <div id="awesome-stuff"></div>
+    		</div>
+    		<div id="visual-when">
+    			<h3>WHEN?</h3>
+    			<p>Take a look at all the awesome stuff you've achieved!</p>
+                <div id="select-date-format">
+                    <select name="date-format">
+                        <option value="eu">DD/MM/YYYY</option>
+                        <option value="us">MM/DD/YYYY</option>
+                        <option value="in">YYYY/MM/DD</option>
+                    <input type="submit" id="js-format-date" class="my-buttons" value="Change Date Format">
+                </div>
+				<div class="timeline-container"></div>
+    		</div>
+        </section>
+        <input type="submit" id="js-back-button" class="my-buttons" value="Back" />
+        <input type="submit" id="js-delete-button" class="my-buttons" value="Delete This Achievement" />
+    </main>
+    <footer>
+    	<ul>
+            <li><p>&#xa9; 2017 Meryem Yanar</p></li>
+            <li><a href="https://github.com/Marjona6" title="Check out my code on GitHub">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/marjona6/" title="Connect with me on LinkedIn">LinkedIn</a></li>
+            <li><a href="mailto:meryem.yanaryanar@gmail.com?Subject=Hello" title="Send me an email">Email</a></li>
+        </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="assets/jquery-2.2.3.min.js"></script>
+    <script src="assets/jquery-ui.js"></script>
+    <script src="assets/client.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>

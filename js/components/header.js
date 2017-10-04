@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export default function Header(props) {
 	return (
@@ -7,6 +8,5 @@ export default function Header(props) {
         <a href="#" id="js-signin-link" alt="Sign In">Sign In</a>
         <a href="#" id="js-signout-link" alt="Sign Out">Sign Out</a>
 		</header>
-
 	)
 }
