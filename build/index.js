@@ -64,12 +64,20 @@
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
+	var _landing = __webpack_require__(218);
+	
+	var _landing2 = _interopRequireDefault(_landing);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	});
 	
 	// import '../assets/css/main.css';
 	
 	document.addEventListener('DOMContentLoaded', function () {
-		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+		return _reactDom2.default.render(_react2.default.createElement(_landing2.default, null), document.getElementById('reactLanding'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -23849,6 +23857,99 @@
 	            )
 	        )
 	    );
+	}
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = Landing;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Landing(props) {
+	  return _react2.default.createElement(
+	    'section',
+	    { id: 'landing-page' },
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'hero' },
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'hero-blurb' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Kiss impostor syndrome goodbye.'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'block-1', 'class': 'landing-block' },
+	      _react2.default.createElement('div', { 'class': 'landing-image' }),
+	      _react2.default.createElement(
+	        'div',
+	        { 'class': 'landing-blurb' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You worked hard to get to where you are today.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Not Just Luck reminds you.'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'block-2', 'class': 'landing-block' },
+	      _react2.default.createElement(
+	        'div',
+	        { 'class': 'landing-blurb' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Tell Not Just Luck about some of your successes and achievements.'
+	        )
+	      ),
+	      _react2.default.createElement('div', { 'class': 'landing-image' })
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'block-3', 'class': 'landing-block' },
+	      _react2.default.createElement('div', { 'class': 'landing-image' }),
+	      _react2.default.createElement(
+	        'div',
+	        { 'class': 'landing-blurb' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Look at your skills, character traits, and accomplishments anytime you need a reminder.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'You did this. It\'s Not Just Luck.'
+	        )
+	      )
+	    )
+	  );
 	}
 
 /***/ })
