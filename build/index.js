@@ -23899,11 +23899,11 @@
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'block-1', 'class': 'landing-block' },
-	      _react2.default.createElement('div', { 'class': 'landing-image' }),
+	      { id: 'block-1', className: 'landing-block' },
+	      _react2.default.createElement('div', { className: 'landing-image' }),
 	      _react2.default.createElement(
 	        'div',
-	        { 'class': 'landing-blurb' },
+	        { className: 'landing-blurb' },
 	        _react2.default.createElement(
 	          'p',
 	          null,
@@ -23918,25 +23918,25 @@
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'block-2', 'class': 'landing-block' },
+	      { id: 'block-2', className: 'landing-block' },
 	      _react2.default.createElement(
 	        'div',
-	        { 'class': 'landing-blurb' },
+	        { className: 'landing-blurb' },
 	        _react2.default.createElement(
 	          'p',
 	          null,
 	          'Tell Not Just Luck about some of your successes and achievements.'
 	        )
 	      ),
-	      _react2.default.createElement('div', { 'class': 'landing-image' })
+	      _react2.default.createElement('div', { className: 'landing-image' })
 	    ),
 	    _react2.default.createElement(
 	      'div',
-	      { id: 'block-3', 'class': 'landing-block' },
-	      _react2.default.createElement('div', { 'class': 'landing-image' }),
+	      { id: 'block-3', className: 'landing-block' },
+	      _react2.default.createElement('div', { className: 'landing-image' }),
 	      _react2.default.createElement(
 	        'div',
-	        { 'class': 'landing-blurb' },
+	        { className: 'landing-blurb' },
 	        _react2.default.createElement(
 	          'p',
 	          null,
