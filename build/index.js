@@ -60,24 +60,80 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _footer = __webpack_require__(217);
-	
-	var _footer2 = _interopRequireDefault(_footer);
-	
-	var _landing = __webpack_require__(218);
+	var _landing = __webpack_require__(217);
 	
 	var _landing2 = _interopRequireDefault(_landing);
 	
+	var _signup = __webpack_require__(218);
+	
+	var _signup2 = _interopRequireDefault(_signup);
+	
+	var _signin = __webpack_require__(219);
+	
+	var _signin2 = _interopRequireDefault(_signin);
+	
+	var _homepage = __webpack_require__(220);
+	
+	var _homepage2 = _interopRequireDefault(_homepage);
+	
+	var _why = __webpack_require__(221);
+	
+	var _why2 = _interopRequireDefault(_why);
+	
+	var _how = __webpack_require__(222);
+	
+	var _how2 = _interopRequireDefault(_how);
+	
+	var _what = __webpack_require__(223);
+	
+	var _what2 = _interopRequireDefault(_what);
+	
+	var _when = __webpack_require__(224);
+	
+	var _when2 = _interopRequireDefault(_when);
+	
+	var _footer = __webpack_require__(225);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// import '../assets/css/main.css';
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
 	});
 	
-	// import '../assets/css/main.css';
-	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_landing2.default, null), document.getElementById('reactLanding'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_signup2.default, null), document.getElementById('reactSignup'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_signin2.default, null), document.getElementById('reactSignin'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_homepage2.default, null), document.getElementById('reactHomepage'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_why2.default, null), document.getElementById('reactWhy'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_how2.default, null), document.getElementById('reactHow'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_what2.default, null), document.getElementById('reactWhat'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_when2.default, null), document.getElementById('reactWhen'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -23798,74 +23854,6 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = Footer;
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(37);
-	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function Footer(props) {
-	    return _react2.default.createElement(
-	        'footer',
-	        null,
-	        _react2.default.createElement(
-	            'ul',
-	            null,
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    '\xA9 2017 Meryem Yanar'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { href: 'https://github.com/Marjona6', title: 'Check out my code on GitHub' },
-	                    'GitHub'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { href: 'https://www.linkedin.com/in/marjona6/', title: 'Connect with me on LinkedIn' },
-	                    'LinkedIn'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    'a',
-	                    { href: 'mailto:meryem.yanaryanar@gmail.com?Subject=Hello', title: 'Send me an email' },
-	                    'Email'
-	                )
-	            )
-	        )
-	    );
-	}
-
-/***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = Landing;
@@ -23950,6 +23938,636 @@
 	      )
 	    )
 	  );
+	}
+
+/***/ }),
+/* 218 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Signup = function (_React$Component) {
+		_inherits(Signup, _React$Component);
+	
+		function Signup(props) {
+			_classCallCheck(this, Signup);
+	
+			var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this, props));
+	
+			_this.state = {};
+			return _this;
+		}
+	
+		_createClass(Signup, [{
+			key: 'doSignup',
+			value: function doSignup(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				var fname = this.refs.fname.value;
+				var uname = this.refs.uname.value;
+				var pw = this.refs.pw.value; // need to encrypt/hash this
+				var confirmPw = this.refs.confirmPw.value; // also encrypt but later
+				console.log(fname, uname, pw, confirmPw);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ id: 'account-signup-page' },
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Start My Best Life Now'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'You can overcome Impostor Syndrome and achieve your goals with confidence.'
+					),
+					_react2.default.createElement(
+						'form',
+						{ id: 'new-account-form', method: 'post' },
+						_react2.default.createElement(
+							'p',
+							null,
+							'First name:'
+						),
+						_react2.default.createElement('input', { type: 'text', name: 'fname', ref: 'fname', defaultValue: this.props.fname, required: true }),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Username:'
+						),
+						_react2.default.createElement('input', { type: 'text', name: 'uname', ref: 'uname', defaultValue: 'charlene123', required: true }),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Password:'
+						),
+						_react2.default.createElement('input', { type: 'password', name: 'pw', ref: 'pw', defaultValue: '1234', required: true }),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Confirm password:'
+						),
+						_react2.default.createElement('input', { type: 'password', name: 'confirmPw', ref: 'confirmPw', defaultValue: '1234', required: true }),
+						_react2.default.createElement('input', { id: 'js-new-account', className: 'my-buttons', onClick: this.doSignup(event), value: 'Let\'s Do This!' })
+					)
+				);
+			}
+		}]);
+	
+		return Signup;
+	}(_react2.default.Component);
+	
+	exports.default = Signup;
+	
+	
+	Signup.defaultProps = {
+		fname: 'Charlene'
+	};
+	
+	// var RepositoryList = React.createClass({
+	//     addRepository: function() {
+	//         var repositoryName = this.refs.repositoryName.value;
+	//         // TODO: Add the repository to the state
+	//         console.log(this.props);
+	//         this.props.dispatch(
+	//             actions.addRepository(repositoryName)
+	//         );
+	//     },
+	//     render: function() {
+	//         var repositories = this.props.repositories.map(function(repository) {
+	//             return <Repository repository={repository} key={repository.name} />;
+	//         });
+	
+	//         return (
+	//             <div className="repository-list">
+	//                 {repositories}
+	//                 <input type="text" ref="repositoryName" />
+	//                 <button type="button" onClick={this.addRepository}>
+	//                     Add repository
+	//                 </button>
+	//             </div>
+	//         );
+	//     }
+	// });
+	
+	// export class GuessForm extends React.Component {
+	//     submitGuess(event) {
+	//         event.preventDefault();
+	//         const value = this.input.value;
+	//         this.props.dispatch(makeGuess(value));
+	//     }
+	
+	//     render() {
+	//         return (
+	//             <form onSubmit={e => this.submitGuess(e)}>
+	//                 <label htmlFor="userGuess">Enter your guess!</label>
+	//                 <input type="text" name="userGuess" id="userGuess"
+	//                     className="text" maxLength="3" autoComplete="off"
+	//                     placeholder={Math.round(Math.random() * 100)} required
+	//                     ref={input => this.input = input} />
+	//                 <input type="submit" id="guessButton" className="button" name="submit" value="Guess"/>
+	//             </form>
+	//         );
+	//     }
+	// };
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Signup = function (_React$Component) {
+		_inherits(Signup, _React$Component);
+	
+		function Signup(props) {
+			_classCallCheck(this, Signup);
+	
+			var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this, props));
+	
+			_this.state = {};
+			return _this;
+		}
+	
+		_createClass(Signup, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ id: 'signin-page' },
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Sign in to My Account'
+					),
+					_react2.default.createElement(
+						'form',
+						null,
+						_react2.default.createElement(
+							'p',
+							null,
+							'Username:'
+						),
+						_react2.default.createElement('input', { name: 'signin-uname', defaultValue: 'charlene123', type: 'text', required: true }),
+						_react2.default.createElement(
+							'p',
+							null,
+							'Password:'
+						),
+						_react2.default.createElement('input', { name: 'signin-pw', defaultValue: '1234', type: 'password', required: true }),
+						_react2.default.createElement('input', { type: 'submit', id: 'js-signin-button', className: 'my-buttons', value: 'Sign In' })
+					)
+				);
+			}
+		}]);
+	
+		return Signup;
+	}(_react2.default.Component);
+	
+	exports.default = Signup;
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Homepage = function (_React$Component) {
+		_inherits(Homepage, _React$Component);
+	
+		function Homepage(props) {
+			_classCallCheck(this, Homepage);
+	
+			var _this = _possibleConstructorReturn(this, (Homepage.__proto__ || Object.getPrototypeOf(Homepage)).call(this, props));
+	
+			_this.state = {};
+			return _this;
+		}
+	
+		_createClass(Homepage, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'section',
+					{ id: 'user-home-page' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Hello, Smarty Pants!'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Welcome to your home page! From here, you can view past successes or add new ones. Go you!'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'To edit or delete your past accomplishments, click on them from the timeline.'
+					),
+					_react2.default.createElement(
+						'div',
+						{ id: 'visualized-home' },
+						_react2.default.createElement(
+							'div',
+							{ id: 'the-why' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								_react2.default.createElement(
+									'h3',
+									null,
+									'WHY?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'my motivations'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ id: 'the-how' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								_react2.default.createElement(
+									'h3',
+									null,
+									'HOW?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'my qualities and skills'
+							)
+						),
+						_react2.default.createElement('div', { id: 'user-avatar' }),
+						_react2.default.createElement(
+							'div',
+							{ id: 'the-what' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								_react2.default.createElement(
+									'h3',
+									null,
+									'WHAT?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'my achievements'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ id: 'the-when' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								_react2.default.createElement(
+									'h3',
+									null,
+									'WHEN?'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'my timeline'
+							)
+						)
+					),
+					_react2.default.createElement('input', { type: 'submit', method: 'post', id: 'js-add-accomplishment', className: 'my-buttons', defaultValue: 'Add An Accomplishment' })
+				);
+			}
+		}]);
+	
+		return Homepage;
+	}(_react2.default.Component);
+	
+	exports.default = Homepage;
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = Why;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Why(props) {
+		return _react2.default.createElement(
+			'div',
+			{ id: 'visual-why' },
+			_react2.default.createElement(
+				'h3',
+				null,
+				'WHY?'
+			),
+			_react2.default.createElement(
+				'p',
+				null,
+				'Understanding what motivates you is crucial. Here you\'ll find a list of what has inspired you to succeed in the past.'
+			),
+			_react2.default.createElement('div', { id: 'motivations' })
+		);
+	}
+
+/***/ }),
+/* 222 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = How;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function How(props) {
+		return _react2.default.createElement(
+			'div',
+			{ id: 'visual-how' },
+			_react2.default.createElement(
+				'h3',
+				null,
+				'HOW?'
+			),
+			_react2.default.createElement(
+				'p',
+				null,
+				'"First, know thyself." Being aware of your best traits and strongest skills can help you overcome the naysayers.'
+			),
+			_react2.default.createElement('div', { id: 'traits' })
+		);
+	}
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = What;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function What(props) {
+		return _react2.default.createElement(
+			'div',
+			{ id: 'visual-what' },
+			_react2.default.createElement(
+				'h3',
+				null,
+				'WHAT?'
+			),
+			_react2.default.createElement(
+				'p',
+				null,
+				'You can\'t be an impostor. Just look at all this awesome stuff you\'ve done!'
+			),
+			_react2.default.createElement('div', { id: 'awesome-stuff' })
+		);
+	}
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = When;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function When(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { id: 'visual-when' },
+	        _react2.default.createElement(
+	            'h3',
+	            null,
+	            'WHEN?'
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Take a look at all the awesome stuff you\'ve achieved!'
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { id: 'select-date-format' },
+	            _react2.default.createElement(
+	                'select',
+	                { name: 'date-format' },
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: 'eu' },
+	                    'DD/MM/YYYY'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: 'us' },
+	                    'MM/DD/YYYY'
+	                ),
+	                _react2.default.createElement(
+	                    'option',
+	                    { value: 'in' },
+	                    'YYYY/MM/DD'
+	                )
+	            ),
+	            _react2.default.createElement('input', { type: 'submit', id: 'js-format-date', className: 'my-buttons', value: 'Change Date Format' })
+	        ),
+	        _react2.default.createElement('div', { className: 'timeline-container' })
+	    );
+	}
+
+/***/ }),
+/* 225 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = Footer;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Footer(props) {
+	    return _react2.default.createElement(
+	        'footer',
+	        null,
+	        _react2.default.createElement(
+	            'ul',
+	            null,
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    '\xA9 2017 Meryem Yanar'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/Marjona6', title: 'Check out my code on GitHub' },
+	                    'GitHub'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://www.linkedin.com/in/marjona6/', title: 'Connect with me on LinkedIn' },
+	                    'LinkedIn'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'mailto:meryem.yanaryanar@gmail.com?Subject=Hello', title: 'Send me an email' },
+	                    'Email'
+	                )
+	            )
+	        )
+	    );
 	}
 
 /***/ })
