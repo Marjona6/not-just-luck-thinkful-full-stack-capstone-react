@@ -72,37 +72,41 @@
 	
 	var _signin2 = _interopRequireDefault(_signin);
 	
-	var _homepage = __webpack_require__(220);
+	var _setup = __webpack_require__(220);
+	
+	var _setup2 = _interopRequireDefault(_setup);
+	
+	var _homepage = __webpack_require__(221);
 	
 	var _homepage2 = _interopRequireDefault(_homepage);
 	
-	var _why = __webpack_require__(221);
+	var _why = __webpack_require__(222);
 	
 	var _why2 = _interopRequireDefault(_why);
 	
-	var _how = __webpack_require__(222);
+	var _how = __webpack_require__(223);
 	
 	var _how2 = _interopRequireDefault(_how);
 	
-	var _what = __webpack_require__(223);
+	var _what = __webpack_require__(224);
 	
 	var _what2 = _interopRequireDefault(_what);
 	
-	var _when = __webpack_require__(224);
+	var _when = __webpack_require__(225);
 	
 	var _when2 = _interopRequireDefault(_when);
 	
-	var _footer = __webpack_require__(225);
+	var _footer = __webpack_require__(226);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// import '../assets/css/main.css';
-	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
 	});
+	
+	// import '../assets/css/main.css';
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_landing2.default, null), document.getElementById('reactLanding'));
@@ -114,6 +118,10 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_signin2.default, null), document.getElementById('reactSignin'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_setup2.default, null), document.getElementById('reactSetup'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -23985,11 +23993,12 @@
 			value: function doSignup(event) {
 				event.preventDefault();
 				event.stopPropagation();
-				var fname = this.refs.fname.value;
-				var uname = this.refs.uname.value;
-				var pw = this.refs.pw.value; // need to encrypt/hash this
-				var confirmPw = this.refs.confirmPw.value; // also encrypt but later
-				console.log(fname, uname, pw, confirmPw);
+				console.log('doSignup is running');
+				// var fname = this.refs.fname.value;
+				// var uname = this.refs.uname.value;
+				// var pw = this.refs.pw.value; // need to encrypt/hash this
+				// var confirmPw = this.refs.confirmPw.value; // also encrypt but later
+				// console.log(fname, uname, pw, confirmPw);
 			}
 		}, {
 			key: 'render',
@@ -24015,7 +24024,7 @@
 							null,
 							'First name:'
 						),
-						_react2.default.createElement('input', { type: 'text', name: 'fname', ref: 'fname', defaultValue: this.props.fname, required: true }),
+						_react2.default.createElement('input', { type: 'text', name: 'fname', ref: 'fname', defaultValue: 'Charlene', required: true }),
 						_react2.default.createElement(
 							'p',
 							null,
@@ -24034,7 +24043,7 @@
 							'Confirm password:'
 						),
 						_react2.default.createElement('input', { type: 'password', name: 'confirmPw', ref: 'confirmPw', defaultValue: '1234', required: true }),
-						_react2.default.createElement('input', { id: 'js-new-account', className: 'my-buttons', onClick: this.doSignup(event), value: 'Let\'s Do This!' })
+						_react2.default.createElement('input', { type: 'submit', id: 'js-new-account', className: 'my-buttons', onClick: this.doSignup(event), defaultValue: 'Let\'s Do This!' })
 					)
 				);
 			}
@@ -24183,6 +24192,387 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	exports.default = Setup;
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(37);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function Setup(props) {
+		return _react2.default.createElement(
+			'section',
+			{ id: 'account-setup-page' },
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Let\'s Get Started!'
+			),
+			_react2.default.createElement(
+				'div',
+				{ id: 'account-setup-blurb' },
+				_react2.default.createElement(
+					'p',
+					null,
+					'Let\'s start by setting up your account.'
+				)
+			),
+			_react2.default.createElement(
+				'div',
+				{ id: 'add-new-blurb' },
+				_react2.default.createElement(
+					'p',
+					null,
+					'Let\'s add another achievement to your list!'
+				)
+			),
+			_react2.default.createElement(
+				'div',
+				{ id: 'add-details' },
+				_react2.default.createElement(
+					'p',
+					null,
+					'First, think of something you\'ve accomplished that you\'re particularly proud of. What did you do? What skills did you use?'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'Finally, think about why this accomplishment is meaningful to you. Did you help someone? Make a difference? Do something everyone told you you could never do?'
+				)
+			),
+			_react2.default.createElement(
+				'form',
+				{ id: 'input-form' },
+				_react2.default.createElement(
+					'h3',
+					null,
+					'What did you achieve?'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'Briefly describe your big achievement.'
+				),
+				_react2.default.createElement('input', { id: 'achieve-what', type: 'text', placeholder: 'I built a schoolhouse.' }),
+				_react2.default.createElement(
+					'h3',
+					null,
+					'How did you achieve it?'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'What specific skills or character traits did you draw on?'
+				),
+				_react2.default.createElement(
+					'fieldset',
+					null,
+					_react2.default.createElement(
+						'ul',
+						{ className: 'checkbox' },
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Optimism' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Optimism'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Creativity' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Creativity'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Resilience' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Resilience'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Self-Control' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Self-Control'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Focus' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Focus'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Flexibility' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Flexibility'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Vision' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Vision'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Time Management' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Time Management'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Communication Skills' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Communication Skills'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Courage' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Courage'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Generosity' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Generosity'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Confidence' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Confidence'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Curiosity' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Curiosity'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Planning' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Planning'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Balance' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Balance'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Enthusiasm' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Enthusiasm'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'People Skills' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'People Skills'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Listening Skills' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Listening Skills'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Empathy' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Empathy'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Preparation' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Preparation'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Self-Reliance' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Self-Reliance'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Gratitude' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Gratitude'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Forgiveness' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Forgiveness'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Goal Setting' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Goal Setting'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Grit' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Grit'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('input', { type: 'checkbox', value: 'Tenacity' }),
+							_react2.default.createElement(
+								'label',
+								null,
+								'Tenacity'
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'h3',
+					null,
+					'When did you achieve it?'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'A rough estimate is fine here.'
+				),
+				_react2.default.createElement('input', { type: 'text', id: 'datepicker', placeholder: 'Date of your accomplishment' }),
+				_react2.default.createElement(
+					'h3',
+					null,
+					'Why is it meaningful to you?'
+				),
+				_react2.default.createElement(
+					'p',
+					null,
+					'Why is this accomplishment something you feel proud of?'
+				),
+				_react2.default.createElement('input', { id: 'achieve-why', type: 'textarea', placeholder: 'I helped people in need.' }),
+				_react2.default.createElement('input', { type: 'submit', id: 'js-submit-accomplishment', className: 'my-buttons', value: 'I Did This!' })
+			)
+		);
+	}
+
+/***/ }),
+/* 221 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -24323,7 +24713,7 @@
 	exports.default = Homepage;
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24362,7 +24752,7 @@
 	}
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24401,7 +24791,7 @@
 	}
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24440,7 +24830,7 @@
 	}
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24503,7 +24893,7 @@
 	}
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -8,6 +8,7 @@ import Header from '../js/components/header';
 import Landing from '../js/components/landing';
 import Signup from '../js/components/signup';
 import Signin from '../js/components/signin';
+import Setup from '../js/components/setup';
 import Homepage from '../js/components/homepage';
 import Why from '../js/components/why';
 import How from '../js/components/how';
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () =>
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<Signin />,
 		document.getElementById('reactSignin'));} );
+
+document.addEventListener('DOMContentLoaded', () =>
+	{return ReactDOM.render(<Setup />,
+		document.getElementById('reactSetup'));} );
 
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<Homepage />,

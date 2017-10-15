@@ -347,3 +347,8 @@ footer a {
     color: #1E3F20;
     text-decoration: none;
 }
+
+/* DATEPICKER */
+#ui-datepicker-div {
+    width: auto !important;
+}

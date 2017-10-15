@@ -10,11 +10,12 @@ export default class Signup extends React.Component {
 	doSignup(event) {
 		event.preventDefault();
 		event.stopPropagation();
-		var fname = this.refs.fname.value;
-		var uname = this.refs.uname.value;
-		var pw = this.refs.pw.value; // need to encrypt/hash this
-		var confirmPw = this.refs.confirmPw.value; // also encrypt but later
-		console.log(fname, uname, pw, confirmPw);
+		console.log('doSignup is running');
+		// var fname = this.refs.fname.value;
+		// var uname = this.refs.uname.value;
+		// var pw = this.refs.pw.value; // need to encrypt/hash this
+		// var confirmPw = this.refs.confirmPw.value; // also encrypt but later
+		// console.log(fname, uname, pw, confirmPw);
 	}
 	
 	render() {
@@ -24,14 +25,14 @@ export default class Signup extends React.Component {
 	    		<p>You can overcome Impostor Syndrome and achieve your goals with confidence.</p>
 	    		<form id="new-account-form" method="post">
 	  				<p>First name:</p>
-	    			<input type="text" name="fname" ref="fname" defaultValue={this.props.fname} required />
+	    			<input type="text" name="fname" ref="fname" defaultValue="Charlene" required />
 	    			<p>Username:</p>
 	    			<input type="text" name="uname" ref="uname" defaultValue="charlene123" required />
 	    			<p>Password:</p>
 	    			<input type="password" name="pw" ref="pw" defaultValue="1234" required />
 	    			<p>Confirm password:</p>
 	    			<input type="password" name="confirmPw" ref="confirmPw" defaultValue="1234" required />
-	    			<input id="js-new-account" className="my-buttons" onClick={this.doSignup(event)} value="Let's Do This!" />
+	    			<input type="submit" id="js-new-account" className="my-buttons" onClick={this.doSignup(event)} defaultValue="Let's Do This!" />
 	    		</form>
 	    	</section>
 	    );

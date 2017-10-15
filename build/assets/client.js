@@ -201,7 +201,7 @@ $(document).ready(function () {
 		const fname = $('input[name="fname"]').val();
 		const uname = $('input[name="uname"]').val();
 		const pw = $('input[name="pw"]').val();
-		const confirmPw = $('input[name="confirm-pw"]').val();
+		const confirmPw = $('input[name="confirmPw"]').val();
 		if (pw !== confirmPw) {
 			event.preventDefault();
 			alert('Passwords must match!');
