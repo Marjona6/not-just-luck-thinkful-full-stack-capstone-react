@@ -4,13 +4,6 @@
   "description": "Not Just Luck is an interactive full-stack web app that helps users overcome impostor syndrome by guiding them to see the history of their own successes as well as the skills and traits that made those successes possible.",
   "main": "js/index.js",
   "dependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.13.1",
-    "babel-preset-react": "^6.11.1",
     "cheerio": "^1.0.0-rc.2",
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.4.0",
@@ -28,22 +21,31 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.6.2",
-    "unirest": "^0.5.1",
-    "webpack": "^1.13.1"
+    "unirest": "^0.5.1"
   },
   "devDependencies": {
+    "acorn": "^5.1.2",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.13.1",
+    "babel-preset-react": "^6.11.1",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.2",
     "chai-http": "^3.0.0",
     "enzyme-adapter-react-15": "^1.0.2",
     "enzyme-adapter-react-16": "^1.0.2",
     "faker": "^3.1.0",
+    "json-loader": "^0.5.7",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
     "react-scripts": "0.9.0",
     "react-test-renderer": "^15.6.2",
     "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.15.0"
   },
   "scripts": {
     "start": "http-server build",
