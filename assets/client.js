@@ -25,7 +25,7 @@ function submitNewAccomplishment(user) {
 			};
 		};
 	var achWhen = $('input[id="datepicker"]').val();
-	achWhen = Date.parse(achWhen);
+	achWhen = Date.parse(achWhen); // returns unix timestamp
 	const achWhy = $('input[id="achieve-why"]').val();
 	const newAchObject = {
 		user: user,
@@ -34,40 +34,45 @@ function submitNewAccomplishment(user) {
 		achieveWhen: achWhen,
 		achieveWhy: achWhy
 	};
-	if (editToggle === false) {
-		$.ajax({
-				type: 'POST',
-				url: 'https://not-just-luck.herokuapp.com/new/create',
-				dataType: 'json',
-				data: JSON.stringify(newAchObject),
-				contentType: 'application/json'
-			})
-			.done(function (result) {
-				showTimeline();
-			})
-			.fail(function (jqXHR, error, errorThrown) {
-	            console.log(jqXHR);
-	            console.log(error);
-	            console.log(errorThrown);
-			});
-	} else if (editToggle === true) {
-		$.ajax({
-				type: 'PUT',
-				url: 'https://not-just-luck.herokuapp.com/achievement/' + achievementId,
-				dataType: 'json',
-				data: JSON.stringify(newAchObject),
-				contentType: 'application/json'
-			})
-			.done(function (result) {
-				showTimeline();
-				editToggle = false;
-			})
-			.fail(function (jqXHR, error, errorThrown) {
-	            console.log(jqXHR);
-	            console.log(error);
-	            console.log(errorThrown);
-			});
-	};
+	if (achWhat == '') {
+		alert("Don't be so modest! Please enter a description of your accomplishment.");
+	} else {
+		if (editToggle === false) {
+			$.ajax({
+					type: 'POST',
+					url: 'https://not-just-luck.herokuapp.com/new/create',
+					dataType: 'json',
+					data: JSON.stringify(newAchObject),
+					contentType: 'application/json'
+				})
+				.done(function (result) {
+					showTimeline();
+				})
+				.fail(function (jqXHR, error, errorThrown) {
+		            console.log(jqXHR);
+		            console.log(error);
+		            console.log(errorThrown);
+				});
+		} else if (editToggle === true) {
+			$.ajax({
+					type: 'PUT',
+					url: 'https://not-just-luck.herokuapp.com/achievement/' + achievementId,
+					dataType: 'json',
+					data: JSON.stringify(newAchObject),
+					contentType: 'application/json'
+				})
+				.done(function (result) {
+					showTimeline();
+					editToggle = false;
+				})
+				.fail(function (jqXHR, error, errorThrown) {
+		            console.log(jqXHR);
+		            console.log(error);
+		            console.log(errorThrown);
+				});
+		};
+	}
+	
 }
 
 function goBack() {
@@ -149,12 +154,12 @@ function showTimeline() {
 				myUl += `<li>${res.achievementOutput[i].achieveHow[j]}</li>`;
 			};
 			myUl += '</ul>';
-			let achWhenReadable = new Date(res.achievementOutput[i].achieveWhen);
+			let achWhenReadable = new Date(parseInt(res.achievementOutput[i].achieveWhen));
 			let dd = achWhenReadable.getDate();
 			let mm = achWhenReadable.getMonth()+1;
 			let yyyy = achWhenReadable.getFullYear();
 			// if statements to choose date display format go here
-			// defaults to European
+			// defaults to European (dd/mm/yyyy)
 			if (dateFormat == 'in') {
 				achWhenReadable = yyyy + '/' + mm + '/' + dd;
 			} else if (dateFormat == 'us') {
@@ -180,7 +185,6 @@ function showTimeline() {
 $(document).ready(function () {
 	// when page first loads
 	$('*').scrollTop(0);
-	// backWarnToggle = false;
 	backToLandingPageToggle = false;
 	$('#signin-page').hide();
 	$('#account-setup-page').hide();
@@ -193,6 +197,14 @@ $(document).ready(function () {
 	$('#account-signup-page').show();
 
 // USER FLOW 1: USER SIGNS UP FOR NEW ACCOUNT
+
+	// user wants to try a demo
+	$('#account-signup-page a').click(function(event) {
+		event.preventDefault();
+		showSignInPage();
+	});
+
+	// user signs up for new account
 	$('#js-new-account').on('click', function(event) {
 		const form = document.body.querySelector('#new-account-form');
 		if (form.checkValidity && !form.checkValidity()) {
@@ -201,7 +213,7 @@ $(document).ready(function () {
 		const fname = $('input[name="fname"]').val();
 		const uname = $('input[name="uname"]').val();
 		const pw = $('input[name="pw"]').val();
-		const confirmPw = $('input[name="confirmPw"]').val();
+		const confirmPw = $('input[name="confirm-pw"]').val();
 		if (pw !== confirmPw) {
 			event.preventDefault();
 			alert('Passwords must match!');
@@ -287,6 +299,23 @@ $(document).ready(function () {
 	                alert('Invalid username and password combination. Pleae check your username and password and try again.');
 	            });
 		};
+
+		// clicking "Not Just Luck" logo takes the user to home page
+		$('#go-home').on('click', function(event) {
+			event.preventDefault();
+			if (newUserToggle == false) {
+				if (backWarnToggle === true) {
+					event.preventDefault();
+					if (confirm('Are you sure you want to go back? Your changes will not be saved.') == true) {
+						$('#input-form')[0].reset();
+						backWarnToggle = false;
+						showHomePage();
+					}
+				} else {
+					showHomePage();
+				}
+			}
+		});
 
 		// when user clicks Add Accomplishment button from #user-home-page
 		$('#js-add-accomplishment').on('click', function(event) {
@@ -465,5 +494,3 @@ $(document).ready(function () {
 // put buttons together in a line?
 // user should be able to add their own skills/traits to checkbox list
 // add 'Oops, nothing here yet!' for empty achievement lists (new users)
-// fix issues with new users who create an account, then come back later to set up account--
-// ... it doesn't automatically take them to account setup page but rather homepage (very minor issue)

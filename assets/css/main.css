@@ -60,11 +60,7 @@ table {
     border-spacing: 0;
 }
 
-
 /* PAGE DEFAULTS */
-/** {
-    border: 1px solid gray;
-}*/
 
 html {
     background-color: #E0CCBC;
@@ -90,6 +86,12 @@ h3 {
 
 a {
     text-decoration: none;
+}
+
+input {
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* HEADER */
@@ -129,6 +131,7 @@ main {
     background: #1E3F20 url("../img/clover.jpg") no-repeat center center fixed;
     height: 500px;
     background-size: cover;
+    background-attachment: scroll;
 }
 
 #hero-blurb {
@@ -140,7 +143,7 @@ main {
 
 .landing-block {
     padding: 5rem;
-    line-height: 6rem;
+    line-height: 2rem;
     font-size: 180%;
 }
 
@@ -149,12 +152,14 @@ main {
     margin: 2%;
     display: inline-block;
     width: 25%;
-    vertical-align: top;
+    vertical-align: middle;
+    min-width: 100px;
 }
 
 .landing-blurb {
     display: inline-block;
     width: 65%;
+    vertical-align: middle;
 }
 
 .landing-block:nth-child(odd) {
@@ -164,7 +169,6 @@ main {
 
 .landing-block:nth-child(odd) .landing-image {
     height: 200px;
-    width: auto;
     display: inline-block;
 }
 
@@ -179,7 +183,6 @@ main {
 
 .landing-block:nth-child(even) .landing-image {
     height: 200px;
-    width: auto;
     display: inline-block;
 }
 
@@ -190,19 +193,16 @@ main {
 #block-1 .landing-image {
     background: transparent url("../img/graduate.jpg") no-repeat center center;
     background-size: cover;
-    width: 20%;
 }
 
 #block-2 .landing-image {
     background: transparent url("../img/laptop-woman.jpg") no-repeat center center;
     background-size: cover;
-    width: 20%;
 }
 
 #block-3 .landing-image {
     background: transparent url("../img/art-woman.jpg") no-repeat center center;
     background-size: cover;
-    width: 20%;
 }
 
 /* ACCOUNT SIGNUP PAGE */
@@ -241,33 +241,70 @@ main {
 
 #account-setup-page ul.checkbox {
     list-style: none;
-    text-align: left;
 }
 
 #account-setup-page ul.checkbox li input {
-    margin-right: 0.25rem;
-    width: 10%;
-    display: inline-block;
+    display: none;
 }
 
 #account-setup-page ul.checkbox li {
-    border: 1px transparent solid;
     line-height: 1rem;
     display: inline-block;
-    width: 16%;
     vertical-align: top;
-    height: 2.5rem;
-}
+/*    height: 2.5rem;
+*/}
 
 #account-setup-page ul.checkbox li label {
-    width: 85%;
     display: inline-block;
+    width: 115px;
+    min-height: 60px;
+    border: 2px solid #1E3F20;
+    border-radius: 5px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
     vertical-align: top;
+    text-align: center;
+}
+
+.skill:checked ~ label[for="cb01"],
+.skill:checked ~ label[for="cb02"],
+.skill:checked ~ label[for="cb03"],
+.skill:checked ~ label[for="cb04"],
+.skill:checked ~ label[for="cb05"],
+.skill:checked ~ label[for="cb06"],
+.skill:checked ~ label[for="cb07"],
+.skill:checked ~ label[for="cb08"],
+.skill:checked ~ label[for="cb09"],
+.skill:checked ~ label[for="cb10"],
+.skill:checked ~ label[for="cb11"],
+.skill:checked ~ label[for="cb12"],
+.skill:checked ~ label[for="cb13"],
+.skill:checked ~ label[for="cb14"],
+.skill:checked ~ label[for="cb15"],
+.skill:checked ~ label[for="cb16"],
+.skill:checked ~ label[for="cb17"],
+.skill:checked ~ label[for="cb18"],
+.skill:checked ~ label[for="cb19"],
+.skill:checked ~ label[for="cb20"],
+.skill:checked ~ label[for="cb21"],
+.skill:checked ~ label[for="cb22"],
+.skill:checked ~ label[for="cb23"],
+.skill:checked ~ label[for="cb24"],
+.skill:checked ~ label[for="cb25"],
+.skill:checked ~ label[for="cb26"] {
+  background: yellow;
 }
 
 /* USER HOMEPAGE */
 #user-home-page {
     margin: 2rem 0 2rem 0;
+}
+
+#user-home-page p {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #user-home-page a {
@@ -294,7 +331,7 @@ main {
 
 #the-why, #the-how, #the-what, #the-when {
     display: inline-block;
-    padding: 0 5rem 0 5rem;
+    padding: 0 2rem 0 2rem;
 }
 
 /* VISUALS */
@@ -348,7 +385,41 @@ footer a {
     text-decoration: none;
 }
 
-/* DATEPICKER */
+/* MISC */
 #ui-datepicker-div {
     width: auto !important;
+}
+
+@media screen and (max-width: 740px) {
+    .landing-image {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .landing-blurb {
+        display: block;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    header h1 {
+        font-size: 200%;
+    }
+
+    #js-signin-link, #js-signout-link {
+        margin-top: 1.5rem;
+    }
+
+    #hero-blurb {
+        padding-top: 50px;
+        font-size: 300%;
+    }
+
+    .landing-block {
+        padding: 5rem 0;
+    }
+
 }

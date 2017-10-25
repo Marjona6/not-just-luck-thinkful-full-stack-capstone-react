@@ -23,14 +23,14 @@ export default class Signup extends React.Component {
 	            <p>To try it out, <a href="#">sign in</a> with username "demo" and password "demo".</p>
 	    		<form id="new-account-form" method="post">
 	  				<p>First name:</p>
-	    			<input type="text" name="fname" required>
+	    			<input type="text" name="fname" required />
 	    			<p>Username:</p>
-	    			<input type="text" name="uname" required>
+	    			<input type="text" name="uname" required />
 	    			<p>Password:</p>
-	    			<input type="password" name="pw" required>
+	    			<input type="password" name="pw" required />
 	    			<p>Confirm password:</p>
-	    			<input type="password" name="confirm-pw" required>
-	    			<input type="submit" id="js-new-account" className="my-buttons" value="Let's Do This!">
+	    			<input type="password" name="confirm-pw" required />
+	    			<input type="submit" id="js-new-account" className="my-buttons" value="Let's Do This!" />
 	    		</form>
 	    	</section>
 	    );

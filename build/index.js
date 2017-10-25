@@ -67370,6 +67370,17 @@
 						'You can overcome Impostor Syndrome and achieve your goals with confidence.'
 					),
 					_react2.default.createElement(
+						'p',
+						null,
+						'To try it out, ',
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'sign in'
+						),
+						' with username "demo" and password "demo".'
+					),
+					_react2.default.createElement(
 						'form',
 						{ id: 'new-account-form', method: 'post' },
 						_react2.default.createElement(
@@ -67377,26 +67388,26 @@
 							null,
 							'First name:'
 						),
-						_react2.default.createElement('input', { type: 'text', name: 'fname', ref: 'fname', defaultValue: 'Charlene', required: true }),
+						_react2.default.createElement('input', { type: 'text', name: 'fname', required: true }),
 						_react2.default.createElement(
 							'p',
 							null,
 							'Username:'
 						),
-						_react2.default.createElement('input', { type: 'text', name: 'uname', ref: 'uname', defaultValue: 'charlene123', required: true }),
+						_react2.default.createElement('input', { type: 'text', name: 'uname', required: true }),
 						_react2.default.createElement(
 							'p',
 							null,
 							'Password:'
 						),
-						_react2.default.createElement('input', { type: 'password', name: 'pw', ref: 'pw', defaultValue: '1234', required: true }),
+						_react2.default.createElement('input', { type: 'password', name: 'pw', required: true }),
 						_react2.default.createElement(
 							'p',
 							null,
 							'Confirm password:'
 						),
-						_react2.default.createElement('input', { type: 'password', name: 'confirmPw', ref: 'confirmPw', defaultValue: '1234', required: true }),
-						_react2.default.createElement('input', { type: 'submit', id: 'js-new-account', className: 'my-buttons', defaultValue: 'Let\'s Do This!' })
+						_react2.default.createElement('input', { type: 'password', name: 'confirm-pw', required: true }),
+						_react2.default.createElement('input', { type: 'submit', id: 'js-new-account', className: 'my-buttons', value: 'Let\'s Do This!' })
 					)
 				);
 			}
@@ -67478,13 +67489,13 @@
 							null,
 							'Username:'
 						),
-						_react2.default.createElement('input', { name: 'signin-uname', defaultValue: 'charlene123', type: 'text', required: true }),
+						_react2.default.createElement('input', { name: 'signin-uname', type: 'text', required: true }),
 						_react2.default.createElement(
 							'p',
 							null,
 							'Password:'
 						),
-						_react2.default.createElement('input', { name: 'signin-pw', defaultValue: '1234', type: 'password', required: true }),
+						_react2.default.createElement('input', { name: 'signin-pw', type: 'password', required: true }),
 						_react2.default.createElement('input', { type: 'submit', id: 'js-signin-button', className: 'my-buttons', value: 'Sign In' })
 					)
 				);
@@ -67503,7 +67514,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+									value: true
 	});
 	exports.default = Setup;
 	
@@ -67530,363 +67541,363 @@
 	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
 	
 	function Setup(props) {
-		return _react2.default.createElement(
-			'section',
-			{ id: 'account-setup-page' },
-			_react2.default.createElement(
-				'h2',
-				null,
-				'Let\'s Get Started!'
-			),
-			_react2.default.createElement(
-				'div',
-				{ id: 'account-setup-blurb' },
-				_react2.default.createElement(
-					'p',
-					null,
-					'Let\'s start by setting up your account.'
-				)
-			),
-			_react2.default.createElement(
-				'div',
-				{ id: 'add-new-blurb' },
-				_react2.default.createElement(
-					'p',
-					null,
-					'Let\'s add another achievement to your list!'
-				)
-			),
-			_react2.default.createElement(
-				'div',
-				{ id: 'add-details' },
-				_react2.default.createElement(
-					'p',
-					null,
-					'First, think of something you\'ve accomplished that you\'re particularly proud of. What did you do? What skills did you use?'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'Finally, think about why this accomplishment is meaningful to you. Did you help someone? Make a difference? Do something everyone told you you could never do?'
-				)
-			),
-			_react2.default.createElement(
-				'form',
-				{ id: 'input-form' },
-				_react2.default.createElement(
-					'h3',
-					null,
-					'What did you achieve?'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'Briefly describe your big achievement.'
-				),
-				_react2.default.createElement('input', { id: 'achieve-what', type: 'text', placeholder: 'I built a schoolhouse.' }),
-				_react2.default.createElement(
-					'h3',
-					null,
-					'How did you achieve it?'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'What specific skills or character traits did you draw on?'
-				),
-				_react2.default.createElement(
-					'fieldset',
-					null,
-					_react2.default.createElement(
-						'ul',
-						{ className: 'checkbox' },
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Optimism' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Optimism'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Creativity' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Creativity'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Resilience' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Resilience'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Self-Control' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Self-Control'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Focus' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Focus'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Flexibility' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Flexibility'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Vision' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Vision'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Time Management' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Time Management'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Communication Skills' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Communication Skills'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Courage' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Courage'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Generosity' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Generosity'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Confidence' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Confidence'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Curiosity' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Curiosity'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Planning' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Planning'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Balance' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Balance'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Enthusiasm' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Enthusiasm'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'People Skills' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'People Skills'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Listening Skills' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Listening Skills'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Empathy' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Empathy'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Preparation' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Preparation'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Self-Reliance' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Self-Reliance'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Gratitude' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Gratitude'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Forgiveness' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Forgiveness'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Goal Setting' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Goal Setting'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Grit' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Grit'
-							)
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement('input', { type: 'checkbox', value: 'Tenacity' }),
-							_react2.default.createElement(
-								'label',
-								null,
-								'Tenacity'
-							)
-						)
-					)
-				),
-				_react2.default.createElement(
-					'h3',
-					null,
-					'When did you achieve it?'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'A rough estimate is fine here.'
-				),
-				_react2.default.createElement('input', { type: 'text', id: 'datepicker', placeholder: 'Date of your accomplishment' }),
-				_react2.default.createElement(
-					'h3',
-					null,
-					'Why is it meaningful to you?'
-				),
-				_react2.default.createElement(
-					'p',
-					null,
-					'Why is this accomplishment something you feel proud of?'
-				),
-				_react2.default.createElement('input', { id: 'achieve-why', type: 'textarea', placeholder: 'I helped people in need.' }),
-				_react2.default.createElement('input', { type: 'submit', id: 'js-submit-accomplishment', className: 'my-buttons', value: 'I Did This!' })
-			)
-		);
+									return _react2.default.createElement(
+																	'section',
+																	{ id: 'account-setup-page' },
+																	_react2.default.createElement(
+																									'h2',
+																									null,
+																									'Let\'s Get Started!'
+																	),
+																	_react2.default.createElement(
+																									'div',
+																									{ id: 'account-setup-blurb' },
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'Let\'s start by setting up your account.'
+																									)
+																	),
+																	_react2.default.createElement(
+																									'div',
+																									{ id: 'add-new-blurb' },
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'Let\'s add another achievement to your list!'
+																									)
+																	),
+																	_react2.default.createElement(
+																									'div',
+																									{ id: 'add-details' },
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'First, think of something you\'ve accomplished that you\'re particularly proud of. What did you do? What skills did you use?'
+																									),
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'Finally, think about why this accomplishment is meaningful to you. Did you help someone? Make a difference? Do something everyone told you you could never do?'
+																									)
+																	),
+																	_react2.default.createElement(
+																									'form',
+																									{ id: 'input-form' },
+																									_react2.default.createElement(
+																																	'h3',
+																																	null,
+																																	'What did you achieve?'
+																									),
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'Briefly describe your big achievement.'
+																									),
+																									_react2.default.createElement('input', { id: 'achieve-what', type: 'text', placeholder: 'I built a schoolhouse.' }),
+																									_react2.default.createElement(
+																																	'h3',
+																																	null,
+																																	'How did you achieve it?'
+																									),
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'What specific skills or character traits did you draw on?'
+																									),
+																									_react2.default.createElement(
+																																	'fieldset',
+																																	null,
+																																	_react2.default.createElement(
+																																									'ul',
+																																									{ className: 'checkbox' },
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb01', value: 'Optimism' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb01' },
+																																																									'Optimism'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb02', value: 'Creativity' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb02' },
+																																																									'Creativity'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb03', value: 'Resilience' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb03' },
+																																																									'Resilience'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb04', value: 'Self-Control' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb04' },
+																																																									'Self-Control'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb05', value: 'Focus' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb05' },
+																																																									'Focus'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb06', value: 'Flexibility' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb06' },
+																																																									'Flexibility'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb07', value: 'Vision' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb07' },
+																																																									'Vision'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb08', value: 'Time Management' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb08' },
+																																																									'Time Management'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb09', value: 'Communication Skills' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb09' },
+																																																									'Communication Skills'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb10', value: 'Courage' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb10' },
+																																																									'Courage'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb11', value: 'Generosity' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb11' },
+																																																									'Generosity'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb12', value: 'Confidence' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb12' },
+																																																									'Confidence'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb13', value: 'Curiosity' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb13' },
+																																																									'Curiosity'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb14', value: 'Planning' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb14' },
+																																																									'Planning'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb15', value: 'Balance' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb15' },
+																																																									'Balance'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb16', value: 'Enthusiasm' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb16' },
+																																																									'Enthusiasm'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb17', value: 'People Skills' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb17' },
+																																																									'People Skills'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb18', value: 'Listening Skills' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb18' },
+																																																									'Listening Skills'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb19', value: 'Empathy' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb19' },
+																																																									'Empathy'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb20', value: 'Preparation' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb20' },
+																																																									'Preparation'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb21', value: 'Self-Reliance' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb21' },
+																																																									'Self-Reliance'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb22', value: 'Gratitude' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb22' },
+																																																									'Gratitude'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb23', value: 'Forgiveness' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb23' },
+																																																									'Forgiveness'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb24', value: 'Goal Setting' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb24' },
+																																																									'Goal Setting'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb25', value: 'Grit' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb25' },
+																																																									'Grit'
+																																																	)
+																																									),
+																																									_react2.default.createElement(
+																																																	'li',
+																																																	null,
+																																																	_react2.default.createElement('input', { type: 'checkbox', className: 'skill', id: 'cb26', value: 'Tenacity' }),
+																																																	_react2.default.createElement(
+																																																									'label',
+																																																									{ 'for': 'cb26' },
+																																																									'Tenacity'
+																																																	)
+																																									)
+																																	)
+																									),
+																									_react2.default.createElement(
+																																	'h3',
+																																	null,
+																																	'When did you achieve it?'
+																									),
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'A rough estimate is fine here.'
+																									),
+																									_react2.default.createElement('input', { type: 'text', id: 'datepicker', placeholder: 'Date of your accomplishment' }),
+																									_react2.default.createElement(
+																																	'h3',
+																																	null,
+																																	'Why is it meaningful to you?'
+																									),
+																									_react2.default.createElement(
+																																	'p',
+																																	null,
+																																	'Why is this accomplishment something you feel proud of?'
+																									),
+																									_react2.default.createElement('input', { id: 'achieve-why', type: 'textarea', placeholder: 'I helped people in need.' }),
+																									_react2.default.createElement('input', { type: 'submit', id: 'js-submit-accomplishment', className: 'my-buttons', value: 'I Did This!' })
+																	)
+									);
 	}
 
 /***/ }),
@@ -68332,7 +68343,7 @@
 	                _react2.default.createElement(
 	                    'a',
 	                    { href: 'https://github.com/Marjona6', title: 'Check out my code on GitHub' },
-	                    'GitHub'
+	                    _react2.default.createElement('img', { src: './assets/img/github.png', alt: 'GitHub' })
 	                )
 	            ),
 	            _react2.default.createElement(
@@ -68341,7 +68352,7 @@
 	                _react2.default.createElement(
 	                    'a',
 	                    { href: 'https://www.linkedin.com/in/marjona6/', title: 'Connect with me on LinkedIn' },
-	                    'LinkedIn'
+	                    _react2.default.createElement('img', { src: 'assets/img/linkedin.png', alt: 'LinkedIn' })
 	                )
 	            ),
 	            _react2.default.createElement(
@@ -68350,7 +68361,7 @@
 	                _react2.default.createElement(
 	                    'a',
 	                    { href: 'mailto:meryem.yanaryanar@gmail.com?Subject=Hello', title: 'Send me an email' },
-	                    'Email'
+	                    _react2.default.createElement('img', { src: 'assets/img/email.png', alt: 'Email', height: '38px' })
 	                )
 	            )
 	        )
